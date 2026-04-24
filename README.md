@@ -19,7 +19,7 @@ Inspired by Nmap but lightweight and customizable.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pyscan
+git clone https://github.com/mabidafridi/scanner
 cd pyscan
 chmod +x install.sh
 ./install.sh

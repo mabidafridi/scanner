@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def print_banner():
-    banner = """
+    banner = r"""
 \033[91m    ____       __                 \033[0m
 \033[91m   / __/___ _/ /____  __________\033[0m
 \033[91m  / _/ / _ `/ __/ _ \/ __/ __/ \033[0m
@@ -9,9 +9,11 @@ def print_banner():
 \033[91m                                \033[0m
 \033[93m    Professional Port Scanner   \033[0m
 \033[93m    Red Team Edition v1.0       \033[0m
-\033[90m    Owner Abid Afridi\033[0m
+\033[90m    github.com/yourusername/pyscan\033[0m
     """
-    print(banner)
+    # Clean up the raw string and apply colors
+    for line in banner.strip().split('\n'):
+        print(line)
 
 def print_results(results):
     if not results:
@@ -24,5 +26,5 @@ def print_results(results):
     print(f"\033[93m{'-'*50}\033[0m")
     
     for r in results:
-        banner_short = r['banner'][:40] if r['banner'] else "Unknown"
+        banner_short = r['banner'][:40] if r.get('banner') else "Unknown"
         print(f"{r['port']:<10} {r['service']:<15} {banner_short}")
