@@ -2,14 +2,11 @@
 
 def print_banner():
     banner = r"""
-\033[91m    ____       __                 \033[0m
-\033[91m   / __/___ _/ /____  __________\033[0m
-\033[91m  / _/ / _ `/ __/ _ \/ __/ __/ \033[0m
-\033[91m /___/ \_,_/\__/\___/_/ /_/    \033[0m
-\033[91m                                \033[0m
-\033[93m    Professional Port Scanner   \033[0m
-\033[93m    Red Team Edition v1.0       \033[0m
-\033[90m    github.com/yourusername/pyscan\033[0m
+     \           \      _|       _)      | _) 
+    _ \         _ \    |     __|  |   _` |  | 
+   ___ \       ___ \   __|  |     |  (   |  | 
+ _/    _\ _) _/    _\ _|   _|    _| \__,_| _| 
+                                              
     """
     # Clean up the raw string and apply colors
     for line in banner.strip().split('\n'):
